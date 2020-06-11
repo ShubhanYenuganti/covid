@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,600;1,300&display=swap" rel="stylesheet">
+
+<link rel  = "stylesheet" href = "global.css">
+
+<head>
+    <title>Covid Stats</title>
+</head>
+
+<body>
+    <div class = "topnav">
+        <a href = "index.html">Total Cases</a>
+        <a href="global.html">Global Cases</a>
+        <a href = "states.html">USA Cases</a>
+        <a href = "county.html">Cases by County</a>
+      </div>
+    <h1 class = "h1">COVID-19 STATS</h1>
+    <h3 class = "h3">Enter a Country to get COVID-19 stats for that country !</h3>
+    <form id="form" onsubmit="func(); return false">
+        <label for="country" class = "label"></label>
+        <input type="text" id="country" name="name" placeholder="Enter Country" required class = "signup-text-input">
+        <br>
+        <br>
+        <input type="submit" value="Submit" class = "button">
+    </form>
+    <br>
+    <textarea id="output" placeholder="Country Stats" rows="10" cols="70" readonly></textarea>
+    <script src="global.js"></script>
+    
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,600;1,300&display=swap" rel="stylesheet">
+
+<link rel  = "stylesheet" href = "county.css">
+
+<head>
+    <title>Covid Stats</title>
+</head>
+
+<body>
+    <div class = "topnav">
+        <a href = "index.html">Total Cases</a>
+        <a href="global.html">Global Cases</a>
+        <a href = "states.html">USA Cases</a>
+        <a href = "county.html">Cases by County</a>
+      </div>
+    <h1 class = "h1">COVID-19 STATS</h1>
+    <h3 class = "h3">Enter a County to get COVID-19 stats for that county !</h3>
+    <form id="form" onsubmit="func(); return false">
+        <label for="city" class = "label"></label>
+        <input type="text" id="city" name="name" placeholder="Enter County" required class = "signup-text-input">
+        <br>
+        <br>
+        <input type="submit" value="Submit" class = "button">
+    </form>
+    <br>
+    <textarea id="output" placeholder="County Stats" rows="10" cols="70" readonly></textarea>
+    <script src="county.js"></script>
+    
+</body>
+
+</html>
