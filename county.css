@@ -8,11 +8,11 @@ input[type = text] {
     box-shadow: 0 0 15px 4px rgba(0,0,0,0.06);
     border: 2px solid #eee;
     border-radius: 10px;
-    width: 15%;
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
     text-align: center;
     font-size: 15px;
+    width: 35%;
 }
 
 textarea {
@@ -29,7 +29,7 @@ textarea {
   }
 
 .button {
-    background-color: #941750; /* Green */
+    background-color: #941750; 
     border: none;
     color: #E3E2DF;
     padding: 15px 30px;
