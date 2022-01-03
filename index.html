@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,600;1,300&display=swap" rel="stylesheet">
+
+<link rel  = "stylesheet" href = "index.css">
+
+<head>
+    <title>Covid Stats</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        *,*::after,*::before{
+           box-sizing: border-box;
+        }
+        .menu-btn {
+           font-size: 18px;
+           font-weight: bold;
+           display: inline-block;
+           text-align: center;
+           background-color: #040008;
+           color: white;
+           padding: 20px;
+           font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+           border: none;
+           width: 100%;
+        }
+        .dropdown-menu {
+           position: relative;
+           display: inline-block;
+        }
+        .menu-content {
+           display: none;
+           position: absolute;
+           width: 100%;
+           background-color: #017575;
+           min-width: 160px;
+           z-index: 1;
+        }
+        nav{
+           background-color: #017575;
+           width: 100%;
+        }
+        .links,.links-hidden{
+           display: inline-block;
+           color: rgb(255, 255, 255);
+           text-decoration: none;
+           font-size: 18px;
+           font-weight: bold;
+           padding: 20px;
+        }
+        .links-hidden:hover,.links:hover {
+           background-color: rgb(8, 107, 46);
+        }
+        .hamburger {
+           color: white;
+           font-weight: bolder;
+           display: none;
+        }
+        @media screen and (max-width: 880px) {
+              nav a:not(:first-child) {
+              display: none;
+           }
+           nav a.hamburger {
+              float: right;
+              display: block;
+              padding: 12px;
+           }
+           nav.openNav a.hamburger {
+              position: relative;
+           }
+           nav.openNav a {
+              float: none;
+              display: block;
+              text-align: center;
+           }
+
+
+        @media screen and (max-width: 800px) {   
+           input[type = text] {
+               width: 50%;
+           }
+        }
+
+        @media screen and (max-width: 800px) {   
+           input[type = text] {
+               width: 60%;
+           }
+        }
+
+        nav.openNav div.dropdown-menu{
+           display: block;
+           width: 100%;
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class = "topnav">
+            <a class="links" href="index.html">Total Cases</a>
+            <a class="links" href="global.html">Global Cases</a>
+            <a class="links" href="states.html">USA Cases</a>
+            <a class="links" href="county.html">Cases by County</a>
+            <a class="links" href="vaccine_country.html">Vaccination by Country</a>
+            <a class="links" href="vaccine_state.html">Vaccination by State</a>
+            <a class="hamburger">☰</a>
+        </div> 
+    </nav>
+    <h1 class = "h1">COVID-19 STATS</h1>
+    <h3 class = "h3">Global Stats about Covid-19 !</h3>
+
+    <textarea id="output" placeholder="Loading ... " rows="10" cols="70" readonly></textarea>
+    <script src="index.js"></script>
+    
+    <script>
+      var x = document.getElementsByTagName("nav")[0];
+      function toggleNav() {
+         if (x.className === "") {
+            x.className = " openNav";
+         } else {
+            x.className = "";
+         }
+      }
+      document.querySelector(".hamburger").addEventListener("click", toggleNav);
+  </script>
+
+
+</body>
+
+</html>
